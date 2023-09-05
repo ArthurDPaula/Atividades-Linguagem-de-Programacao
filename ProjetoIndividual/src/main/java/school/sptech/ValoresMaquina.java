@@ -6,17 +6,14 @@ public class ValoresMaquina {
     private Double ram;
     private Double cpu;
     private Double disco;
-    public Double sortearRam(){
+    public void sortearRam(){
         ram = ThreadLocalRandom.current().nextDouble(0.0,100.0);
-        return ram;
     }
-    public Double sortearCpu(){
+    public void sortearCpu(){
         cpu = ThreadLocalRandom.current().nextDouble(0.0,100.0);
-        return cpu;
     }
-    public Double sortearDisco(){
+    public void sortearDisco(){
         disco = ThreadLocalRandom.current().nextDouble(0.0,100.0);
-        return disco;
     }
     public void exibirMensagem(){
         System.out.println("""

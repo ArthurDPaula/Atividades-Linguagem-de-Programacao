@@ -7,18 +7,22 @@ public class Main {
         Scanner leitor = new Scanner(System.in);
         Scanner leitorUsuario = new Scanner(System.in);
         Scanner leitorSenha = new Scanner(System.in);
+
         Integer opcao = -1;
         ValoresMaquina maquina1 = new ValoresMaquina();
-        String usuario = "alfa";
-        String senha = "alfa123";
-        String usuarioDigitado;
+
+        Usuario usuarioTeste = new Usuario();
+        usuarioTeste.setEmail("alfa@email.com");
+        usuarioTeste.setSenha("alfa123");
+
+        String emailDigitado;
         String senhaDigitada;
         do {
             System.out.println("Digite o seu usuário:");
-            usuarioDigitado = leitorUsuario.nextLine();
+            emailDigitado = leitorUsuario.nextLine();
             System.out.println("Digite a sua senha:");
             senhaDigitada = leitorSenha.nextLine();
-            if (usuarioDigitado.equalsIgnoreCase(usuario) && senhaDigitada.equalsIgnoreCase(senha)){
+            if (emailDigitado.equalsIgnoreCase(usuarioTeste.getEmail()) && senhaDigitada.equalsIgnoreCase(usuarioTeste.getSenha())){
                 System.out.println("Logado com sucesso");
                 do {
                     System.out.println("""
